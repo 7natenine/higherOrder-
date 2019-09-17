@@ -42,3 +42,8 @@ rocksWarning('Main St and Pacific Ave');
 rocksWarning('Centinela Ave and Olympic Blvd');
 
 let turtleMomvent = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
+console.log(turtleMomvent.filter((item) => !(item[0] < 0 || item[1] < 0)));
+let totalMovement = turtleMomvent.map((item) => {
+    return Math.abs(item[0])+Math.abs(item[1]);
+});
+console.log(totalMovement);
