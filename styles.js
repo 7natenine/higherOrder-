@@ -46,7 +46,11 @@ console.log(turtleMomvent.filter((item) => !(item[0] < 0 || item[1] < 0)));
 let totalMovement = turtleMomvent.map((item) => {
     return Math.abs(item[0])+Math.abs(item[1]);
 });
-console.log(totalMovement)
+console.log(totalMovement);
+
+totalMovement.forEach(function(element, index){
+    console.log('Movement #' + index + ': ' + element + ' steps' );
+});
 
 let sent = 'noggin oreo the moon time tele steed his tent apollo her lives though shoo tofu budapest';
 function temp(accumulator, word) {
@@ -58,3 +62,5 @@ function temp(accumulator, word) {
     return accumulator;
 }
 console.log(sent.split(' ').reduce(temp, ''));
+
+
