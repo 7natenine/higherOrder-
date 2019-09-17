@@ -46,4 +46,15 @@ console.log(turtleMomvent.filter((item) => !(item[0] < 0 || item[1] < 0)));
 let totalMovement = turtleMomvent.map((item) => {
     return Math.abs(item[0])+Math.abs(item[1]);
 });
-console.log(totalMovement);
+console.log(totalMovement)
+
+let sent = 'noggin oreo the moon time tele steed his tent apollo her lives though shoo tofu budapest';
+function temp(accumulator, word) {
+    if(word.length === 3) {
+        accumulator += ' '
+    } else {
+        accumulator += word.substr(0,word.length-1) + word.substr(word.length-1).toUpperCase();
+    }
+    return accumulator;
+}
+console.log(sent.split(' ').reduce(temp, ''));
