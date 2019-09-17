@@ -47,3 +47,7 @@ let totalMovement = turtleMomvent.map((item) => {
     return Math.abs(item[0])+Math.abs(item[1]);
 });
 console.log(totalMovement);
+
+totalMovement.forEach(function(element, index){
+    console.log('Movement #' + index + ': ' + element + ' steps' );
+});
